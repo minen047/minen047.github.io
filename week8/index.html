@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans';
+        }
+
+        h1 {
+            font-family: 'Noto Serif';
+            color: #F8A720;
+            font-size: 60px;
+            margin-top: 70px;
+        }
+
+        h4 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 24px;
+            color: #642714;
+            font-family: 'Open Sans';
+        }
+
+        .header {
+            background-color: #F8A720;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        a {
+            font-weight: bolder;
+            color: #642714;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 15px;
+        }
+
+        .button {
+            margin-left: 50px;
+        }
+
+        .banner-image-container {
+            position: relative;
+            width: 100%;
+            margin: auto;
+        }
+
+        .banner-img {
+            width: 100%;
+            display: block;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: left;
+            width: 80%;
+        }
+
+
+
+        .button {
+            background-color: #F8A720;
+            color: #642714;
+            padding: 15px 40px;
+            border-radius: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .scroll-text {
+            color: #fff;
+            font-size: 24px;
+            font-family: 'Open Sans', sans-serif;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            margin-right: 10px;
+            /* Space between text and icon */
+        }
+
+        .scroll-indicator img {
+            width: 30px;
+            height: 40px;
+        }
+
+        .p-image-container {
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .p-image-container img {
+            width: 450px;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 150px;
+            margin-left: 150px;
+        }
+
+        .p-image-text h3 {
+            font-size: 40px;
+            color: #F8A720;
+            ;
+            margin: 20 0 18px 0;
+            font-family: 'Noto Serif', serif;
+            font-weight: 700;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        .p-image-text p {
+            font-size: 24px;
+            color: #642714;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #642714;
+            font-size: 26px;
+        }
+
+        .img-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            /* space between cards */
+            margin: 60px 0;
+        }
+
+        .img-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-card img {
+            width: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .img-card p {
+            font-size: 24px;
+            color: #642714;
+            margin: 0 0 10px 0;
+
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #888;
+            display: block;
+            margin: 0 0 10px 0;
+        }
+
+        .custom-section {
+            background: #FDE2CF;
+            padding: 50px 50px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        .custom-section-text h3 {
+            font-size: 40px;
+            color: #F8A720;
+            margin-bottom: 10px;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .custom-section-text p {
+            font-size: 24px;
+            color: #642714;
+            margin: 0 0 60px 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .custom-box-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .custom-box {
+            background: #F8A720;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(100, 39, 20, 0.08);
+            padding: 30px 20px;
+            width: 400px;
+            height: 250px;
+        }
+
+        .custom-box h4 {
+            font-size: 24px;
+            color: #F8A720;
+            margin: 0;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .custom-box p {
+            font-size: 24px;
+            color: #642714;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            text-align: left;
+
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+            gap: 12px;
+        }
+
+        .reviewer-img {
+            width: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 2px solid #F8A720;
+        }
+
+        .reviewer-name {
+            font-size: 24px;
+            color: #642714;
+            margin-top: 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+        }
+
+        .feature-section {
+            background: #F8A720;
+            padding: 50px 30px;
+            text-align: left;
+            position: relative;
+            min-height: 700px;
+            padding-bottom: 100px;
+        }
+
+        .feature-section-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+
+        .feature-title {
+            font-size: 40px;
+            color: #ffffff;
+            font-family: 'Noto Serif', serif;
+            margin: 0 0 40px 0;
+            text-align: left;
+            /* Title left-aligned */
+            font-weight: 700;
+        }
+
+        .feature-row {
+            display: flex;
+            align-items: flex-start;
+            /* Align items to the top/left */
+            gap: 40px;
+            margin-bottom: 40px;
+            justify-content: flex-start;
+            /* Row content left-aligned */
+        }
+
+        .feature-text {
+            max-width: 700px;
+            text-align: left;
+            /* Text left-aligned */
+        }
+
+        .feature-text p {
+            font-size: 24px;
+            color: #642714;
+            font-family: 'Open Sans', sans-serif;
+            margin: 20px 0 0 0;
+        }
+
+        .feature-img-left img[src="img.6.png"] {
+            width: 450px;
+        }
+
+        .feature-img-row img[src="img.7.png"] {
+            width: 600px;
+        }
+
+        .feature-img-row img[src="img.8.png"] {
+            width: 330px;
+            margin-left: 50px;
+        }
+
+        .feature-section-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .custom-feature-section {
+            background: #FDE2CF;
+            padding: 30px 30px;
+            text-align: left;
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .custom-feature-title {
+            font-size: 40px;
+            color: #F8A720;
+            font-family: 'Noto Serif', serif;
+            margin: 0 0 40px 0;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .custom-feature-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .custom-feature-img-main img {
+            width: 380px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .custom-feature-right {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            flex: 1;
+        }
+
+        .custom-feature-text p {
+            font-size: 24px;
+            color: #642714;
+            font-family: 'Open Sans', sans-serif;
+            margin: 50px 50px 30px 0;
+            line-height: 1.5;
+        }
+
+        .custom-feature-img-row {
+            display: flex;
+            gap: 24px;
+        }
+
+        .custom-feature-img-row img {
+            width: 380px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #F8A720;
+            padding: 50px 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            flex-shrink: 0;
+        }
+
+        .footer-logo img {
+            width: 130px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .footer-content {
+            flex: 1;
+        }
+
+        .footer-title {
+            font-size: 32px;
+            color: #642714;
+            font-family: 'Noto Serif', serif;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column p {
+            margin: 5px 0;
+            font-size: 24px;
+            color: #642714;
+
+        }
+
+        .footer-links div:hover {
+            color: #F8A720;
+        }
+
+        .footer-text {
+            font-size: 16px;
+            color: #642714;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General</title>
+    <link rel="stylesheet" href="/web/css/general.css">
+</head>
+
+<body>
+    <div class="header">
+        <div><img src="penang.food.logo.png" alt="PenangFoodie Logo" width="150"></div>
+
+        <div class="menu">
+            <div><a href="foodmenu.html">Food Menu</a></div>
+            <div><a href="transport.html">Transport</a></div>
+            <div><a href="guidedtours.html">Guided Tours</a> </div>
+            <div><a href="journeydiaries.html">Journey Diaries</a></div>
+            <div><a href="meettheteam.html">Meet the Team</a></div>
+            <div><a href="contact.html">Contact</a></div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-image-container">
+            <img src="penang.bic.png" alt="Penang Food Banner" class="banner-img">
+            <div class="banner-text">
+                <h2>Your 5-Day Penang Journey</h2>
+                <h1>Your Ultimate Guide To Penang Adventures</h1>
+
+
+                <a href="foodmenu.html" class="button">
+                    Get Stared
+                    <img src="arrowhead-right-svgrepo-com.svg" alt="Icon" width="38">
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to see more</span>
+                <img src="Group 46.png" alt="Scroll Icon" width="50">
+            </div>
+        </div>
+
+    </div>
+    <div class="p-image-container">
+        <img src="image.1.png" alt="Penang Food Banner">
+        <div class="p-image-text">
+            <h3>Leave The Planning To Us</h3>
+            <p>Explore Penang like a local with our private guides and custom 5-day itineraries.
+                <br><br>
+                Discover hidden food spots and rich culture with passionate, multilingual guides.
+                <br><br><br><br><br>
+                <span class="highlight">No stress — your Penang adventure starts here.</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="p-image-text">
+        <h3>Must-See Places in Penang</h3>
+        <p>Your adventure starts here.</p>
+        <div class="img-row">
+            <div class="img-card">
+                <img src="img.2.png" alt="Place 1">
+                <p>Penang Hill </p> <span class="subtitle">Island / Penang Hill</span><span class="view-more">View
+                    More</span>
+            </div>
+            <div class="img-card">
+                <img src="img.3.png" alt="Place 2">
+                <p>Kek Lok Si Temple</p><span class="subtitle">Island / Jln Balik Pulau</span><span
+                    class="view-more">View More</span>
+            </div>
+            <div class="img-card">
+                <img src="img.4.png" alt="Place 3">
+                <p>Peranakan Mansion</p><span class="subtitle">Island / Church St</span><span class="view-more">View
+                    More</span>
+            </div>
+            <div class="img-card">
+                <img src="img.5.png" alt="Place 4">
+                <p>The TOP Penang</p><span class="subtitle">Island / Jalan Penang</span><span class="view-more">View
+                    More</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-section">
+        <div class="custom-section-text">
+            <h3>What Our Guests Are Saying</h3>
+            <p>Plan less, explore more.</p>
+        </div>
+        <div class="custom-box-row">
+            <div class="custom-box">
+                <h4>Expert Guides</h4>
+                <p>“Went with your 5-day plan and didn’t miss a single meal. My taste buds thank you!”</p>
+                <div class="reviewer">
+                    <img src="reviewer1.png" alt="Reviewer Name" class="reviewer-img">
+                    <span class="reviewer-name">Unknown</span>
+                </div>
+            </div>
+            <div class="custom-box">
+                <h4>Flexible Plans</h4>
+                <p>Customize your journey to fit your interests.</p>
+                <div class="reviewer">
+                    <img src="reviewer2.png" alt="Reviewer Name" class="reviewer-img">
+                    <span class="reviewer-name">Jane</span>
+                </div>
+            </div>
+            <div class="custom-box">
+                <h4>Local Insights</h4>
+                <p>Discover hidden gems and authentic experiences.</p>
+                <div class="reviewer">
+                    <img src="reviewer3.png" alt="Reviewer Name" class="reviewer-img">
+                    <span class="reviewer-name">Amirah</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <img src="icon1.png" alt="Feature Icon" class="feature-section-icon">
+        <h3 class="feature-title">Day 1: Explore & Taste</h3>
+        <div class="feature-row">
+            <div class="feature-img-left">
+                <img src="img.6.png" alt="Left Feature" />
+            </div>
+            <div class="feature-text">
+                <p>
+                    Dive into Penang’s flavors with 888 Hokkien Mee for lunch, refresh with nutmeg juice at Chowrasta
+                    Market, and finish strong at New Lane Hawker Center for dinner — all packed with local vibes and
+                    delicious eats!
+                </p><img src="icon2.png" alt="Feature Icon" class="feature-section-icon">
+            </div>
+        </div>
+        <div class="feature-img-row">
+            <img src="img.7.png" alt="Bottom Image 1" />
+            <img src="img.8.png" alt="Bottom Image 2" />
+        </div>
+    </div>
+
+    <div class="custom-feature-section">
+        <h3 class="custom-feature-title">Day 2: Hidden Gems Unlocked</h3>
+        <div class="custom-feature-row">
+            <div class="custom-feature-img-main">
+                <img src="img.9.png" alt="Main Left Image">
+            </div>
+            <div class="custom-feature-right">
+                <div class="custom-feature-text">
+                    <p>
+                        Start your day with Nyonya kuih, then take a cultural stroll through Love Lane, Peranakan
+                        Mansion, or chill by the sea at Gurney Drive.
+                    </p><img src="icon1.png" alt="Feature Icon" class="feature-section-icon">
+                </div>
+                <div class="custom-feature-img-row">
+                    <img src="img.10.png" alt="Side Image 1">
+                    <img src="img.11.png" alt="Side Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <img src="icon1.png" alt="Feature Icon" class="feature-section-icon">
+        <h3 class="feature-title">Day 3: Local Life & Culture</h3>
+        <div class="feature-row">
+            <div class="feature-img-left">
+                <img src="Rectangle 97.png" alt="Left Feature" />
+            </div>
+            <div class="feature-text">
+                <p>
+                    Start your day with breathtaking views from Penang Hill and explore the stunning Kek Lok Si Temple.
+                    For lunch, savor the famous Ayer Itam Asam Laksa nearby. Afterward, treat yourself to delicious
+                    pastries at Ming Xiang Tai — a perfect mix of culture, flavor, and heritage!
+                </p><img src="icon2.png" alt="Feature Icon" class="feature-section-icon">
+            </div>
+        </div>
+        <div class="feature-img-row">
+            <img src="Rectangle 98.png" alt="Bottom Image 1" />
+            <img src="Rectangle 99.png" alt="Bottom Image 2" />
+        </div>
+    </div>
+
+    <div class="custom-feature-section">
+        <h3 class="custom-feature-title">Day 4: Sea, Sun & Streets</h3>
+        <div class="custom-feature-row">
+            <div class="custom-feature-img-main">
+                <img src="Rectangle 101.png" alt="Main Left Image">
+            </div>
+            <div class="custom-feature-right">
+                <div class="custom-feature-text">
+                    <p>
+                        Start with a hearty bowl of white curry mee, savor iconic Siam Road char koay teow for dinner,
+                        and end your night exploring Batu Ferringhi Night Market’s seafood and beach vibes.
+                    </p><img src="icon1.png" alt="Feature Icon" class="feature-section-icon">
+                </div>
+                <div class="custom-feature-img-row">
+                    <img src="Rectangle 100.png" alt="Side Image 1">
+                    <img src="Rectangle 102.png" alt="Side Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <img src="icon1.png" alt="Feature Icon" class="feature-section-icon">
+        <h3 class="feature-title">Day 5: Your Penang Finale</h3>
+        <div class="feature-row">
+            <div class="feature-img-left">
+                <img src="Rectangle 103.png" alt="Left Feature" />
+            </div>
+            <div class="feature-text">
+                <p>
+                    Enjoy a flavorful lunch at Macalister Nasi Lemak, then wander the creative vibes of Hin Bus Depot
+                    Market with its local crafts and cozy coffee spots.
+                </p><img src="icon2.png" alt="Feature Icon" class="feature-section-icon">
+            </div>
+        </div>
+        <div class="feature-img-row">
+            <img src="Rectangle 104.png" alt="Bottom Image 1" />
+            <img src="Rectangle 105.png" alt="Bottom Image 2" />
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="penang.logo 2.png" alt="PenangFoodie Logo">
+        </div>
+        <div class="footer-content">
+            <h3 class="footer-title">Craving more? Keep exploring with Penang Foodie.</h3>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <p>About Us</p>
+                    <p>Instagram</p>
+                    <p>Email Us</p>
+                </div>
+                <div class="footer-column">
+                    <p>Food Menu</p>
+                    <p>Guided Tours</p>
+                    <p>Journey Diaries</p>
+                </div>
+                <div class="footer-column">
+                    <p>FAQ</p>
+                    <p>Your Guide to Local Transport</p>
+                </div>
+            </div>
+
+            <p class="footer-text">
+                © 2025 Penang Foodie. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

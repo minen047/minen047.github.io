@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+
+
+body {
+    background-color: #FBFCEE;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.body2 {
+    margin: 50px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 150px;
+    margin: 0px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 80px;
+    margin: 0px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 10%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.home a {
+    color: black;
+    text-decoration: none;
+}
+
+.home a:hover {
+    color: gray;
+}
+
+.home img {
+    width: 10%;
+}
+
+.button {
+    font-size: 12px;
+    font-weight: lighter;
+    border: black 1px solid;
+    background: none;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+h4 {
+    font-size: 57px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+h5 {
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+h6 {
+    color: #E7E7D9;
+    font-size: 230px;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+.footer {
+    background-color: #472425;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-box {
+    margin: 50px;
+    padding-top: 30px;
+
+    width: calc((100% - 50px) / 4);
+}
+
+.footer-box .text2 p {
+    color: white;
+    text-transform: none;
+}
+
+.footer h6 {
+    color: #755854;
+    padding-bottom: 20px;
+}

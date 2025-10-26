@@ -1,0 +1,33 @@
+.imgbg {
+    max-width: 100%;
+}
+
+.imgbg img {
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.text2 p {
+    color: black;
+}
+
+.contentbox5 {
+    padding-left: 50px;
+}
+
+
+.contenttext5 {
+    padding-top: 30px;
+    width: calc((100% - 50px) / 4);
+
+
+}
+
+.contentrow5 {
+    display: flex;
+}
+
+.content5 {
+    width: calc((100% - 150px) / 4);
+}

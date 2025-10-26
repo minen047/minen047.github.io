@@ -1,0 +1,316 @@
+.title {
+    margin-top: 80px;
+}
+
+.contentbox {
+    height: auto;
+    /* 高度自适应内容 */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contentbox>div {
+    width: calc((100% - 180px) / 3);
+    height: auto;
+    /* 平均分配 3 个区块的宽度 */
+}
+
+.box {
+    width: 50%;
+}
+
+.box img {
+    width: 100%;
+}
+
+.line-with-dots {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: black;
+    border-radius: 50%;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: black;
+}
+
+.contentbox2 {
+    padding: 50px;
+}
+
+.contentbox2 p,
+.contentbox2 h4 {
+    text-align: center;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: calc((100% - 100px) / 3);
+    height: 535px;
+}
+
+.box1 {
+    background: #6a7b2c;
+}
+
+.box2 {
+    background: #ffffff;
+}
+
+.box3 {
+    background: #a64d3e;
+}
+
+.box-content {
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.box-content p {
+    text-transform: none;
+}
+
+.box-content img {
+    width: 70%;
+}
+
+.box2 h5,
+.box2 p {
+    color: black;
+}
+
+.big-box {
+    padding-top: 100px;
+    display: flex;
+}
+
+.big-box>div {
+    width: calc((100% - 20px) / 2);
+}
+
+.photo-box {
+    display: flex;
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.photo-box div {
+    width: 25%;
+}
+
+.photo-box img {
+    width: 100%;
+    display: block;
+}
+
+.photo-box div:nth-child(2),
+.photo-box div:nth-child(4) {
+    padding-top: 20px;
+}
+
+.stats {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 200px;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imgbg {
+    position: relative;
+    width: 100%;
+}
+
+.imgbg button {
+    border: white 1px solid;
+    color: #ffffff;
+}
+
+.imgbg img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: flex-end;
+}
+
+.text h3 {
+    border-color: white;
+}
+
+.text2 p {
+    color: #82878E;
+    font-family: 'Tenor Sans', sans-serif !important;
+}
+
+.contentbox3 {
+    display: flex;
+    padding-top: 50px;
+    gap: 200px;
+}
+
+.contentbox3>div {
+    width: 50%;
+}
+
+.right2 h4 {
+    padding-bottom: 40px;
+}
+
+.leftimg {
+    width: 100%;
+}
+
+.leftimg img {
+    width: 100%;
+}
+
+.right2 img {
+    width: 90%;
+}
+
+.left2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box4 {
+    background-color: white !important;
+}
+
+.contentbox4 {
+    margin: 50px;
+}
+
+.text4 {
+    padding-top: 100px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.gallery>div {
+    width: calc((100% - 30px) / 4);
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+.imgbg {
+    position: relative;
+}
+
+.imgbg img {
+    width: 100%;
+    display: block;
+}
+
+.whitebox {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 40px;
+    width: 400px;
+}
+
+.boxtext .text2 p {
+    padding-bottom: 150px;
+}
+
+.hidden-gems {
+    text-align: center;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.reviewtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+}
+
+.reviewtext p {
+    margin: 0px;
+    text-align: center;
+}
+
+.reviewtext img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.lastbox {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.lastimg {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.lastimg img {
+    width: 10%;
+}
