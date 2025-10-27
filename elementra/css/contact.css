@@ -5,7 +5,6 @@
 .imgbg img {
     padding-top: 50px;
     width: 100%;
-    padding-bottom: 50px;
 }
 
 .text2 p {
@@ -13,7 +12,8 @@
 }
 
 .contentbox5 {
-    padding-left: 50px;
+    width: 80%;
+    padding: 100px;
 }
 
 
@@ -30,4 +30,26 @@
 
 .content5 {
     width: calc((100% - 150px) / 4);
+}
+
+.line-with-dots {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: black;
+    border-radius: 50%;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background: black;
+}
+
+.contenttext6 {
+    padding: 100px;
 }
