@@ -3,6 +3,7 @@
 
 
 
+
 body {
     background-color: #FBFCEE;
     font-family: 'Tenor Sans', sans-serif;
@@ -14,7 +15,12 @@ body {
 }
 
 .body2 {
-    margin: 50px;
+    margin-top: 50px;
+}
+
+.bg {
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
@@ -38,17 +44,33 @@ p {
     justify-content: space-between;
 }
 
+.logo-container {
+    width: 12%;
+
+}
+
+.logo-container img {
+    width: 100%;
+    /* 图片自适应容器宽度 */
+    height: auto;
+    /* 高度按比例缩放 */
+    display: block;
+    /* 去掉下方空隙 */
+}
+
 .logo img {
     width: 10%;
 }
-
-
 
 .home {
     display: flex;
     align-items: center;
     gap: 20px;
     font-size: 12px;
+}
+
+.menu-icon {
+    display: none;
 }
 
 .home a {
@@ -61,7 +83,7 @@ p {
 }
 
 .home img {
-    width: 10%;
+    width: 80%;
 }
 
 .button {
@@ -88,7 +110,7 @@ h4 {
 }
 
 h5 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: lighter;
     margin: 0px;
 }
@@ -98,6 +120,12 @@ h6 {
     font-size: 230px;
     font-weight: lighter;
     margin: 0px;
+}
+
+.locations-title {
+    margin: 0 auto;
+    /* 居中 */
+    text-align: center;
 }
 
 .footer {
@@ -125,4 +153,170 @@ h6 {
 .footer h6 {
     color: #755854;
     padding-bottom: 20px;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* 禁止横向滚动条 */
+}
+
+.bigbox {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    /* 重要：不要固定宽度，改成 100% */
+}
+
+.bigbox2 {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    background: #fff;
+}
+
+
+@media (max-width: 1420px) {
+    h1 {
+        font-size: 100px;
+        /* 大标题缩小 */
+    }
+
+    h4 {
+        font-size: 50px;
+        /* 四级标题缩小 */
+    }
+
+    h6 {
+        font-size: 155px;
+        /* 六级标题缩小 */
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon img {
+        width: 80%;
+    }
+
+    .home {
+        display: none;
+    }
+
+
+    .body2 {
+        margin: 20px;
+        /* margin 缩小一点 */
+    }
+
+    h1 {
+        font-size: 100px;
+        /* 大标题缩小 */
+    }
+
+    p {
+        font-size: 12px;
+        /* 段落文字缩小 */
+    }
+}
+
+@media (max-width: 925px) {
+    h1 {
+        font-size: 85px;
+        /* 大标题缩小 */
+    }
+
+    h2 {
+        font-size: 60px;
+        /* 二级标题缩小 */
+    }
+}
+
+@media (max-width: 795px) {
+    h1 {
+        font-size: 75px;
+        /* 大标题缩小 */
+    }
+
+    h2 {
+        font-size: 60px;
+        /* 二级标题缩小 */
+    }
+}
+
+@media (max-width: 710px) {
+    h1 {
+        font-size: 70px;
+        /* 大标题缩小 */
+    }
+
+    h2 {
+        font-size: 60px;
+        /* 二级标题缩小 */
+    }
+}
+
+@media (max-width: 680px) {
+    h2 {
+        font-size: 30px;
+        /* 二级标题缩小 */
+    }
+}
+
+@media (max-width: 665px) {
+    h1 {
+        font-size: 65px;
+        /* 大标题缩小 */
+    }
+}
+
+@media (max-width: 608px) {
+
+
+    h1 {
+        font-size: 60px;
+        /* 大标题缩小 */
+    }
+
+    h2 {
+        font-size: 40px;
+        /* 二级标题缩小 */
+    }
+
+    h3 {
+        font-size: 25px;
+        /* 三级标题缩小 */
+    }
+
+    h4 {
+        font-size: 20px;
+        /* 四级标题缩小 */
+    }
+
+    h5 {
+        font-size: 20px;
+        /* 五级标题缩小 */
+    }
+
+    .text {
+        gap: 15px;
+    }
+
+    .button {
+        padding: 15px 20px;
+        /* 按钮变小 */
+    }
+
+
+    .logo-container {
+        width: 30%;
+
+    }
+
+
 }

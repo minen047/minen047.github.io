@@ -1,5 +1,5 @@
 .title {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .contentbox {
@@ -8,15 +8,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 90px;
+    gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .contentbox>div {
-    width: calc((100% - 180px) / 3);
+    /* width: calc((100% - 180px) / 3); */
     height: auto;
     /* 平均分配 3 个区块的宽度 */
+}
+
+.content img {
+    width: 10% !important;
 }
 
 .box {
@@ -63,10 +67,6 @@
     align-items: center;
 }
 
-.box {
-    width: calc((100% - 100px) / 3);
-    height: 535px;
-}
 
 .box1 {
     background: #6a7b2c;
@@ -129,13 +129,22 @@
 }
 
 .stats {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 200px;
     display: flex;
-    padding-top: 80px;
-    padding-bottom: 30px;
+    flex-wrap: wrap;
+    /* 自动换行 */
+    gap: 20px;
+    /* 格子间距 */
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.stat-item {
+    width: calc(25% - 15px);
+    /* 桌面一行四格 */
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .fullscreen {
@@ -268,6 +277,7 @@
 
 .hidden-gems {
     text-align: center;
+    padding-top: 50px;
 }
 
 .review {
@@ -305,12 +315,261 @@
 
 .lastimg {
     display: flex;
+    flex-wrap: wrap;
+    /* 允许换行 */
+    gap: 10px;
+    /* 图片间距 */
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    gap: 20px;
 }
 
 .lastimg img {
-    width: 10%;
+    display: block;
+    /* 去掉行内间隙 */
+    width: calc(16.20% - 6.66px);
+    /* 桌面 6 张，每张减去一部分 gap */
+}
+
+@media (max-width: 1024px) {
+
+    .content img {
+        width: 20%;
+        /* 内容图片宽度自适应 */
+    }
+
+    .contentbox,
+    .contentbox3,
+    .stats {
+        /* 从左右变上下 */
+        gap: 30px;
+        /* 间距缩小 */
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+        /* 图库自动换行 */
+    }
+
+    .gallery>div {
+        width: 48%;
+        /* 平板变两栏 */
+    }
+
+    .photo-box div {
+        width: 48%;
+        /* 照片自动两栏 */
+    }
+}
+
+@media (max-width: 700px) {
+    .lastimg img {
+        width: calc(50% - 5px);
+        /* 每行两张，减去一半 gap */
+    }
+}
+
+
+
+
+
+
+/* ✅ 手机模式 */
+@media (max-width: 600px) {
+
+    .title {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+        /* 标题继续缩小 */
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .gallery>div,
+    .photo-box div {
+        width: 100%;
+        /* 手机变一栏 */
+    }
+
+    .home {
+        flex-wrap: wrap;
+        /* 导航换行 */
+    }
+
+    .contentbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .box {
+        width: 100%;
+        height: 600px;
+    }
+
+
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 40px;
+    }
+
+    .box-content img {
+        width: 80%;
+    }
+
+    h6 {
+        font-size: 70px;
+    }
+
+    .big-box {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .big-box>div {
+        width: 100%;
+    }
+
+    .photo-box {
+        display: flex;
+        flex-wrap: wrap;
+        /* 允许换行 */
+        gap: 20px;
+        /* 间距 */
+    }
+
+    .photo-box>div {
+        flex: 0 0 calc(50% - 10px);
+        /* 每行两格 */
+    }
+
+    .photo-box img {
+        width: 100%;
+        /* 图片填满 div */
+        display: block;
+    }
+
+    .stat-item {
+        width: 48%;
+        /* 每行两格 */
+    }
+
+    .stat-item {
+        width: calc(50% - 10px);
+    }
+
+    .imgbg img {
+        height: 280px;
+
+    }
+
+    .text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .contentbox3>div {
+        width: auto;
+    }
+
+    .contentbox3 {
+        flex-direction: column;
+    }
+
+    .contentbox3>div {
+        width: 100% !important;
+    }
+
+    .right2 img {
+        width: 100% !important;
+        padding-top: 20px;
+    }
+
+    .right2 h4 {
+        padding-bottom: 20px;
+    }
+
+    .contentbox3,
+    .stats {
+        /* 从左右变上下 */
+        gap: 3px;
+        padding-top: 20px;
+    }
+
+
+    .text2 p {
+        text-transform: none;
+
+    }
+
+    .contentbox4 {
+        margin: 20px;
+    }
+
+    .text4 {
+        padding-top: 20px;
+
+    }
+
+    .gallery {
+        padding-top: 15px;
+        padding-bottom: 20px;
+
+    }
+
+    .whitebox {
+        width: 400px;
+        padding: 20px;
+        left: 50%;
+        /* 从左边50%开始 */
+        right: auto;
+        /* 取消右边偏移 */
+        transform: translate(-50%, -50%);
+        /* 可选：减少内边距 */
+    }
+
+
+    .boxtext .text2 p {
+        padding-bottom: 20px;
+    }
+
+    .imgbg {
+        margin-bottom: 20px;
+    }
+
+    .review {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .reviewtext {
+        width: 100%;
+
+    }
+
+    .content p br {
+        display: none;
+    }
+
+    .content img {
+        width: 7% !important;
+    }
+
+    .contentbox2 {
+        padding: 30px;
+    }
+
+    .stats {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
 }
